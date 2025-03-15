@@ -31,6 +31,8 @@ public class DetectLoopInLinkedlist {
 		node.next.next = new ListNode(3);
 		node.next.next.next = new ListNode(4);
 		node.next.next.next.next = node;  //Detected loop in the Linked list
+		
+		
 		DetectLoopInLinkedlist detectLoopInLinkedlist = new DetectLoopInLinkedlist();
 		System.out.println(detectLoopInLinkedlist.hasCycle(node));
 	}
