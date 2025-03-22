@@ -1,4 +1,4 @@
-package mainclass;
+package dsa;
 
 class ListNode {
 	int key;

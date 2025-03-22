@@ -1,4 +1,4 @@
-package mainclass;
+package dsa;
 
 import java.util.logging.Logger;
 
