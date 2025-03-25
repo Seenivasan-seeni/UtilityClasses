@@ -10,7 +10,7 @@ public class Circle implements Shape {
 
 	@Override
 	public Shape clone() {
-		return new Circle(colour);
+		return new Circle(colour);//like a deep copy
 	}
 
 	@Override
