@@ -1,8 +1,10 @@
 package structuraldesignpatterns.FacadeDesignPattern;
 
+import java.io.FileNotFoundException;
+
 public class Client {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		DVDPlayer dvdPlayer= new DVDPlayer();
 		Speaker speaker = new Speaker();
 		Projector projector = new Projector();
