@@ -3,7 +3,7 @@ package structuraldesignpatterns.FlyWeightDesignPattern;
 public class ClientMain {
 
 	public static void main(String[] args) {
-
+		//Shape Colours
 		String[] colours = { "Red", "Green", "Orange" };
 
 		for (int i = 0; i < 100; i++) {
