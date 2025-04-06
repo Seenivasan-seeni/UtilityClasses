@@ -12,7 +12,7 @@ public class ClientMain {
 			Circle circle = (Circle) ShapeFactory.getCircle(colour);
 			circle.draw(i * 10, i * 20);
 		}
-
+		//Test comment
 	}
 
 }
