@@ -1,6 +1,6 @@
 package main;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 
 	private String empName;
 	private int age;
@@ -35,6 +35,17 @@ public class Employee {
 		this.domain = domain;
 		this.country = country;
 		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", age=" + age + ", domain=" + domain + ", country=" + country
+				+ ", salary=" + salary + "]";
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+		return this.age > o.age ? 1 : -1;
 	}
 
 }
