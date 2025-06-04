@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class KruskalsAlgorithm {
+public class GreedyAlgorithm {
 
 	static class Edge implements Comparable<Edge> {
 		int from;
@@ -57,7 +57,7 @@ public class KruskalsAlgorithm {
 		li.get(1).add(edge4);
 		li.get(2).add(edge5);
 
-//		primsAlg(li, 4, 0);
+		primsAlg(li, 4, 0);
 
 		PriorityQueue<Edge> pq = new PriorityQueue<Edge>();
 		pq.add(edge1);
