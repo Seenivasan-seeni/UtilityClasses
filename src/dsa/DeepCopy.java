@@ -15,7 +15,6 @@ class Address1 {
 
 class Student1 implements Cloneable {
 	String name;
-
 	Address1 address;
 
 	Student1(String name, Address1 address) {

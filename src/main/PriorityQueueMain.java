@@ -35,7 +35,7 @@ public class PriorityQueueMain {
 		 * the queue and then again restructure the data based on the respective pattern
 		 */
 
-		System.out.println(priorityQueue.poll());
+//		System.out.println(priorityQueue.poll());
 		System.out.println(priorityQueue);
 	}
 
