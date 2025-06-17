@@ -4,6 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * The Greedy algorithm is used to find the minimum spanning tree (ie.) We can
+ * able to calculate the minimum weigth of the edges without any cycles. To
+ * acheive that we are using the Disjoint set algorithm/ Union-Find algorithm
+ * inside the Kruskals algorithm.
+ * 
+ * <p>
+ * Greedy algorithm can be classified into two types: <b>1) Prims algorithm</b>
+ * <b>2) Kruskals algorithm</b>.
+ * </p>
+ * 
+ * 
+ */
 public class GreedyAlgorithm {
 
 	static class Edge implements Comparable<Edge> {
