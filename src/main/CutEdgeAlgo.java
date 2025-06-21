@@ -6,11 +6,14 @@ import java.util.List;
 import java.util.stream.Stream;
 
 /*
- * Cut Edge Algorithm is used to find how many components are available in the graph if we remove any of the connected edges.
- * We have used DFS traversal to solve this algorithm
+ * Cut Edge Algorithm is used to find how many Strongly connected components(SCC) are available in the graph 
+ * if we remove any of the connected edges.
+ * We have used DFS traversal to solve this algorithm.
+ * 
+ * It is also called tarjans algorithm.
  */
 public class CutEdgeAlgo {
-	
+
 	static int time = 0;
 	
 	private static void cutEdgeAlgo(List<List<Integer>> graph, int n) {
@@ -49,7 +52,7 @@ public class CutEdgeAlgo {
 				parent[v] = i;
 				dfs(visited, adj, step, v, parent, low);
 				low[i] = Math.min(low[i], low[v]);
-				if(low[v]>step[i]) {
+				if (low[v] > step[i]) {
 					System.out.println(i + " - " + v);
 				}
 			} else {
@@ -59,13 +62,8 @@ public class CutEdgeAlgo {
 	}
 
 	/*
-	 * visited - [true,true,true,true,true]
-	 * adj - [[1], [2, 3], [0], [4], []]
-	 * step - [1,2,3,4,5] 
-	 * i = 3	
-	 * parent - [-1,0,1,1,3] 
-	 * low = [Max,Max,1,Max,3]
-	 * v = 4
+	 * visited - [true,true,true,true,true] adj - [[1], [2, 3], [0], [4], []] step -
+	 * [1,2,3,4,5] i = 3 parent - [-1,0,1,1,3] low = [Max,Max,1,Max,3] v = 4
 	 */
 	// [[0, 1], [1, 2], [2, 0], [1, 3], [3, 4]]
 	public static void main(String[] args) {
