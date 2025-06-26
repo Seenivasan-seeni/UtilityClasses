@@ -65,7 +65,7 @@ class DijkstraAlgorithm {
 
         // Add edges
         graph.get(0).add(new Edge(1, 4)); // A -> B (4)
-        graph.get(0).add(new Edge(2, 2)); // A -> C (2)
+        graph.get(0).add(new Edge(2, -2)); // A -> C (2)
         graph.get(1).add(new Edge(2, 5)); // B -> C (5)
         graph.get(1).add(new Edge(3, 10)); // B -> D (10)
         graph.get(2).add(new Edge(4, 3)); // C -> E (3)

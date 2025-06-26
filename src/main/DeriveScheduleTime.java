@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.ToIntFunction;
 
-public class DeriveScheduleTime {
+public class DeriveScheduleTime implements ToIntFunction {
 
 	static int minScheduleTime = 30;
 
@@ -17,8 +18,8 @@ public class DeriveScheduleTime {
 		String[][] p1 = { { "10:00", "11:00" }, { "13:00", "14:00" }, { "15:00", "15:30" }, { "16:00", "16:30" } };
 		String[][] p2 = { { "09:30", "10:00" }, { "11:30", "12:30" }, { "16:00", "17:30" } };
 
-		findAvailTime(p1, p2);
-//		findAvailTime1(p1, p2);
+//		findAvailTime(p1, p2);
+		findAvailTime1(p1, p2);
 	}
 
 	/*
@@ -114,6 +115,13 @@ public class DeriveScheduleTime {
 		busyTime.sort(Comparator.comparingInt(a -> convertIntoMin(a[1])));
 		System.out.println("---------------------------");
 		busyTime.forEach(sa -> System.out.println(sa[0] + " - " + sa[1]));
+	}
+
+	@Override
+	public int applyAsInt(Object a) {
+		String[] timeFrame = a.toString().split(":");
+		int timeInMin = Integer.parseInt(timeFrame[0]) * 60 + Integer.parseInt(timeFrame[1]);
+		return timeInMin;
 	}
 
 }
